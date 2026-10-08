@@ -66,19 +66,21 @@
     place: "twinformatics GmbH · Insurance",
     date: "05.2026 – Present",
     body: [
-      Member of the platform team for a large multi-cluster Google Cloud ecosystem of
-      around 10 GKE clusters, responsible for the shared infrastructure (Cloud SQL, Redis,
-      Kafka, ingress) and for enabling development teams to use it.
-
-      - Provisioning, configuration and lifecycle management of Cloud SQL, Redis, Kafka and ingress controllers across multiple GKE clusters
-      - Secret management with External Secrets Operator and Google Secret Manager, with access control via Workload Identity and IAM role bindings
-      - CI/CD pipelines with GitHub Actions for automated build, test and deployment workflows
-      - GitOps workflows with Google Cloud Config Sync for declarative configuration management
-      - Helm charts for new projects and migration of existing deployments from kpt packages to Helm
-      - Istio service mesh: mTLS and AuthorizationPolicies for secure service-to-service communication; traffic management (VirtualServices, DestinationRules, Gateways) for canary deployments, retries, timeouts and fault-injection testing
-      - Onboarding, documentation and support to enable development teams on the platform
-
-      #tech("Technologies", "GCP (GKE), Kubernetes, Helm, kpt, Istio, Config Sync, GitHub Actions, External Secrets Operator, Google Secret Manager, Cloud IAM, Workload Identity, Kafka, Redis, Cloud SQL")
+      Member of the platform team for a large multi-cluster Google Cloud ecosystem of around
+      10 Kubernetes (GKE) clusters, responsible for setting up and maintaining the shared
+      infrastructure (Cloud SQL, Redis, Kafka, ingress) and enabling development teams to use
+      it. Key focus areas include CI/CD pipelines and automation, GitOps-based configuration
+      management, secret and access management, and secure service-to-service networking
+      with Istio.
+      - Provisioning, configuration and lifecycle management of infrastructure components such as Cloud SQL, Redis, Kafka and ingress controllers across multiple GKE clusters.
+      - Secret management with External Secrets Operator and Google Secret Manager, including access control via Workload Identity and IAM role bindings for workloads and teams.
+      - Design and implementation of CI/CD pipelines with GitHub Actions for automated build, test and deployment workflows.
+      - Implementation of GitOps workflows with Google Cloud Config Sync for declarative configuration management.
+      - Creation and maintenance of Helm charts for new projects, and migration of existing deployments from kpt packages to Helm.
+      - Operation and further development of Istio as a service mesh to secure service-to-service communication with mutual TLS (mTLS) and to enforce fine-grained access policies (AuthorizationPolicies).
+      - Configuration of Istio traffic management (VirtualServices, DestinationRules, Gateways) for controlled routing and canary deployments, resilience via retries and timeouts, and resilience testing via fault injection.
+      - Enabling development teams to use the platform through onboarding, documentation and support.
+      #tech("Technologies Used", "Google Cloud Platform (GKE), Kubernetes, Helm, kpt, Istio, Config Sync, GitHub Actions, External Secrets Operator, Google Secret Manager, Cloud IAM, Workload Identity, Kafka, Redis, Cloud SQL")
     ],
   ),
   (
@@ -87,18 +89,24 @@
     date: "06.2025 – 04.2026",
     body: [
       Design, setup and operation of a central Kubernetes/OpenShift platform hosting 30+
-      healthcare projects, covering platform architecture, deployments, CI/CD and platform
-      security.
-
-      - Implementation and ongoing maintenance of OpenShift clusters for performance and reliability
-      - Helm-based deployments for 30+ projects and GitLab CI pipelines for automated builds, updates and deployments
-      - Introduction and operation of HashiCorp Vault as central, auditable secrets management for 30+ projects
-      - Identity & access management with RBAC and SSO
-      - Introduction and operation of Istio with mTLS, AuthorizationPolicies and traffic management for canary deployments
-      - Artifact management with Harbor and Nexus for Docker images and parent Helm charts
-      - Client support, documentation and team training on OpenShift best practices
-
-      #tech("Technologies", "OpenShift, Kubernetes, Helm, GitLab CI, Istio, HashiCorp Vault, RBAC, SSO, Harbor, Nexus, Java, Spring Boot, MongoDB, Elasticsearch")
+      healthcare projects. Responsibilities covered the platform architecture, Helm-based
+      deployments and GitLab CI pipelines for automated builds, updates and deployments, as
+      well as platform security: identity & access management (RBAC, SSO), a service mesh
+      with Istio for mTLS-secured service-to-service communication, fine-grained access
+      policies and controlled traffic management, and centralized, auditable secrets
+      management with HashiCorp Vault.
+      - Setup and management of deployments for 30+ projects with Helm and Kubernetes/OpenShift.
+      - Development of CI/CD pipelines with GitLab CI for automated builds, updates, and deployments.
+      - Management of artifact repositories (Harbor and Nexus) for both Docker images and parent Helm charts.
+      - Design and implementation of Identity & Access Management solutions, including RBAC and SSO.
+      - Introduction of Istio as the platform's service mesh, enforcing mutual TLS (mTLS) between all services and restricting access through fine-grained AuthorizationPolicies.
+      - Definition of routing rules (VirtualServices, DestinationRules, Gateways) for canary releases, combined with retries, timeouts and fault-injection tests to make the services more resilient.
+      - Introduction and operation of HashiCorp Vault as a central, auditable secrets management solution for 30+ projects.
+      - Providing direct client support.
+      - Writing comprehensive documentation.
+      - Team training on OpenShift best practices to ensure smooth operations and knowledge transfer across the development and DevOps teams.
+      - Implementation and ongoing maintenance of OpenShift clusters to ensure optimal performance and reliability.
+      #tech("Technologies Used", "OpenShift, Kubernetes, Helm, GitLab CI, Istio, HashiCorp Vault, RBAC, SSO, Harbor, Nexus, Java, Spring Boot, MongoDB, Elasticsearch")
     ],
   ),
   (
@@ -106,40 +114,45 @@
     place: "Takeda · Pharmaceuticals",
     date: "06.2024 – 05.2025",
     body: [
-      Setup and operation of the TetraScience Scientific Data Platform on AWS, ingesting and
-      harmonizing laboratory and instrument data in a GxP-regulated environment, with a strong
-      focus on security, compliance and traceable software delivery.
-
-      - Setup, configuration and operation of the platform across development, test and production stages
-      - Provisioning and hardening of EC2 instances: VPC and subnet design, Security Groups, IAM roles and least-privilege access
-      - Storage and databases with Amazon S3 (bucket policies, encryption, versioning, lifecycle rules) and Amazon RDS (backups, high availability)
-      - Operation of Amazon ECS clusters and ECR for containerized workloads across all stages
-      - CI/CD pipelines with GitHub Actions for container images and infrastructure changes
-      - GxP-compliant delivery: change control, traceable and reproducible deployments, audit-ready documentation
-      - Close collaboration with IT, QA/Compliance, the business and the platform vendor TetraScience
-
-      #tech("Technologies", "AWS (EC2, ECS, ECR, S3, RDS, VPC, IAM), TetraScience Data Platform, Docker, GitHub Actions, Git, Linux, GxP")
+      Setup and operation of the TetraScience Scientific Data Platform on AWS, used to ingest,
+      harmonize and provide laboratory and instrument data in a GxP-regulated environment.
+      Responsible for the platform infrastructure across multiple clusters and stages
+      (development, test and production), including the shared networking, compute (EC2,
+      ECS), storage (S3, RDS) and CI/CD, with a strong focus on security, compliance and
+      validated, traceable software delivery.
+      - Setup, configuration and operation of the new TetraScience Data Platform on AWS across multiple clusters and stages (development, test and production).
+      - Provisioning and hardening of EC2 instances according to AWS security and networking best practices, including VPC and subnet design, Security Groups, IAM roles and least-privilege access.
+      - Setup and management of storage and database services with Amazon S3 (bucket policies, encryption, versioning, lifecycle rules) and Amazon RDS (automated backups, high availability).
+      - Management and maintenance of Amazon ECS clusters and Amazon ECR for running containerized (Docker) applications consistently across all stages.
+      - Automated build, test and release of container images and infrastructure changes through GitHub Actions pipelines.
+      - Support of GxP-compliant software delivery and deployment processes, including change control, traceable and reproducible deployments and audit-ready documentation in line with pharmaceutical quality requirements.
+      - Creation and maintenance of technical documentation (architecture, runbooks, operating procedures) and close collaboration with stakeholders from IT, Quality Assurance/Compliance, the business and the platform vendor TetraScience.
+      #tech("Technologies Used", "AWS (EC2, ECS, ECR, S3, RDS, VPC, IAM), TetraScience Data Platform, Docker, GitHub Actions, Git, Linux, GxP")
     ],
   ),
   (
-    title: "Senior Full Stack Developer & DevOps Engineer",
-    place: "SECO (Swiss State Secretariat for Economic Affairs) · Public sector",
+    title: "Senior Full Stack Developer and DevOps Engineer",
+    place: "SECO (Staatssekretariat für Wirtschaft) · Public sector",
     date: "2020 – 05.2024",
     body: [
-      Development and operation of a public job portal built from 20+ backend and frontend
-      microservices communicating via REST and Kafka. Besides full-stack development, I led
-      the migration to OpenShift and owned CI/CD, GitOps, the service mesh, monitoring and
-      secrets handling.
-
-      - Full-stack development with Java/Spring Boot and TypeScript/Angular
-      - Led the migration to OpenShift; implementation and maintenance of the cluster
-      - CI/CD pipelines with Tekton and GitOps application design with ArgoCD
-      - Istio service mesh for 20+ microservices: mTLS and traffic management for gradual rollouts
-      - Monitoring and logging with Prometheus, Grafana and the Elastic Stack (ELK)
-      - Secure handling of application secrets with Kubernetes/OpenShift Secrets and Sealed Secrets
-      - OpenShift workshops and team retraining
-
-      #tech("Technologies", "OpenShift, Kubernetes, Helm, Kustomize, Tekton, ArgoCD, Istio, Sealed Secrets, Prometheus, Grafana, ELK, Java, Spring Boot, TypeScript, Angular, Apache Kafka, PostgreSQL, Spring Cloud Data Flow")
+      Development and operation of a public job portal where job seekers and employers find
+      and communicate with each other: employers publish job positions and search for suitable
+      candidates, while job seekers apply for jobs. The platform is built as a microservice
+      architecture (20+ backend and frontend microservices) communicating via REST and events
+      (Kafka). Besides full-stack development, I led the migration of the platform to
+      OpenShift and was responsible for its CI/CD (Tekton) and GitOps (ArgoCD) setup, the
+      Istio service mesh, monitoring and logging, and the secure handling of application
+      secrets.
+      - Full stack software engineering with Java/Spring Boot and TypeScript/Angular.
+      - Introduction and migration of the project to OpenShift and implementation and maintenance of the cluster.
+      - Design and implementation of pipelines with Tekton.
+      - GitOps application design with ArgoCD.
+      - OpenShift workshops and team retraining.
+      - Operation of Istio as a service mesh for the 20+ microservices, encrypting and securing internal communication with mTLS.
+      - Gradual rollouts and request routing of the services via Istio VirtualServices, DestinationRules and Ingress Gateways.
+      - Setup and operation of monitoring and logging solutions with Prometheus, Grafana and the Elastic Stack (ELK).
+      - Management and protection of sensitive configuration data using Kubernetes Secrets, OpenShift Secrets and Sealed Secrets for the secure storage and delivery of application secrets.
+      #tech("Technologies Used", "OpenShift, Kubernetes, Helm, Kustomize, Tekton, ArgoCD, Istio, Sealed Secrets, Prometheus, Grafana, Elastic Stack (ELK), Java, Spring Boot, TypeScript, Angular, Apache Kafka, Postgres, Spring Cloud Dataflow")
     ],
   ),
 )
