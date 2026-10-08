@@ -1,0 +1,12 @@
+# Build output
+/out/
+/*.pdf
+
+# Local-only phone number for private builds (see build.sh)
+/.phone
+
+# Typst cache
+.typst-cache/
+
+# IDE
+.idea/
